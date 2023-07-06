@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Career Wizard - Colleges</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body{
+      background: linear-gradient(rgb(255, 255, 255), rgb(91, 158, 235));
+      background-repeat: inherit;
+
+    }
+
+    .mt-5 {
+      color: rgb(1, 1, 18);
+      font-weight: bold;
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-display: flex;
+      font-style: italic;
+      text-decoration: solid;
+      background-color: whitesmoke;
+      width:500px;
+      border-radius: 20px;
+     margin-top: 20px;
+     margin-left: 270px;
+     background-repeat: no-repeat;
+     background-position-x: center;
+      
+    }
+
+    .card {
+      margin: 20px;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    .card-text {
+      color: rgb(58, 5, 76);
+      text-decoration: solid;
+    }
+
+    .card-body {
+      position: relative;
+      border-radius: 3;
+    }
+
+
+    /* #myDiv { 
+              
+                background: 
+url("./pict.png");
+                background-size: 169.99px 204px;
+                opacity: 0.9;
+                  
+            } */
+  
+  .card-text{
+    color: rgb(9, 3, 59);
+    text-decoration: solid;
+  }
+
+
+  .card-body:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color:yellow;
+      
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.1;
+
+      .spinner {
+    width: 44px;
+    height: 44px;
+    animation: spinner-y0fdc1 2s infinite ease;
+    transform-style: preserve-3d;
+    margi
+   }
+   
+   .spinner > div {
+    background-color: rgba(0,77,255,0.2);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    border: 2px solid #004dff;
+   }
+   
+   .spinner div:nth-of-type(1) {
+    transform: translateZ(-22px) rotateY(180deg);
+   }
+   
+   .spinner div:nth-of-type(2) {
+    transform: rotateY(-270deg) translateX(50%);
+    transform-origin: top right;
+   }
+   
+   .spinner div:nth-of-type(3) {
+    transform: rotateY(270deg) translateX(-50%);
+    transform-origin: center left;
+   }
+   
+   .spinner div:nth-of-type(4) {
+    transform: rotateX(90deg) translateY(-50%);
+    transform-origin: top center;
+   }
+   
+   .spinner div:nth-of-type(5) {
+    transform: rotateX(-90deg) translateY(50%);
+    transform-origin: bottom center;
+   }
+   
+   .spinner div:nth-of-type(6) {
+    transform: translateZ(22px);
+   }
+   
+   @keyframes spinner-y0fdc1 {
+    0% {
+     transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+    }
+   
+    50% {
+     transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+    }
+   
+    100% {
+     transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+    }
+   }
+   .link{
+    margin:5px
+   }
+   
+   button {
+  position: relative;
+  font-size: 18px;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  top: 20px;
+  left: 30px;
+  cursor: pointer;
+  will-change: box-shadow, transform;
+  background: radial-gradient(100% 100% at 100% 0%, #89E5FF 0%, #5468FF 100%);
+  box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+  padding: 0 2em;
+  border-radius: 0.3em;
+  color: #fff;
+  height: 2.6em;
+  text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+
+button:hover {
+  box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #3c4fe0;
+  transform: translateY(-0.1em);
+}
+
+button:active {
+  box-shadow: inset 0px 0.1em 0.6em #3c4fe0;
+  transform: translateY(0em);
+}
+.hi {
+  width: 100%;
+  height: 50px;
+  border-radius: 50px;
+}
+
+      
+  }
+  </style>
+</head>
+<body>
+  <!-- <a href="home.html">
+    <button> <img src="https://i.ibb.co/HxTtrQ3/logo.png" class="hi">
+    </button> </a> -->
+  
+  <div class="container">
+    <div class="title1">
+    <h1 class="mt-5"  align="center">List of colleges:</h1>
+  </div>
+    <div class="row mt-4" id="maindiv">
+      <!-- <div class="col-md-4">
+        <div class="card">
+          <div class="card-body"   id="myDiv">
+            <h2 class="card-title">PICT</h2>
+            <p class="card-text">Pune Institute Of Computer Technology</p>
+           
+          </div>
+          <a href="pict.html" >Learn More</a>
+        </div>
+      </div>
+    
+
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">COEP</h2>
+            <p class="card-text">College of Engineering Pune</p><br>
+            <a href="#" class="card-link">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">VIT</h2>
+            <p class="card-text">Vishwakarma Institute of Technology</p><br>
+            <a href="#" class="card-link">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">MIT</h2>
+            <p class="card-text">MIT -World Peace University</p><br>
+            <a href="#" class="card-link">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">AISSMS</h2>
+            <p class="card-text">All India Shree Shivaji Memorial Society </p>
+            <a href="#" class="card-link">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">VIIT</h2>
+            <p class="card-text">Vishwakarma Institute of Information Technology</p>
+            <a href="#" class="card-link">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">PVG's COET</h2>
+            <p class="card-text">Pune Vidyarthi Griha’s College of Engineering and Technology (PVG, Pune) </p><br><br>
+            <a href="#" class="card-link">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">MKSSS's Cummins College of Engineering for Women</h2>
+            <p class="card-text">Engineering college for women in Pune, Maharashtra</p>
+            <a href="#" class="card-link">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title"> Sinhgad College of Engineering</h2>
+            <p class="card-text">SCOE</p><br><br>
+            <a href="#" class="card-link">Learn More</a>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+      const value = urlParams.get('type');
+      console.log(value); 
+        var colleges=[
+          {
+            "collegename":"PICT",
+            "branchname":["computer","it","entc"],
+            "fullform":"Pune Institue Of Computer Technology"
+          },
+          {
+            "collegename":"VIT",
+            "branchname":["computer","civil","it","mech","chem","entc"],
+            "fullform":"Vishwakrama Institue of technology"
+          },
+          {
+            "collegename":"COEP",
+            "branchname":["computer","civil","it","mech","entc"],
+            "fullform":"College Of Engineering Pune"
+          },
+          {
+            "collegename":"Cummins",
+            "branchname":["computer","it","mech","entc"],
+            "fullform":"Cummins College Of Engineering Pune"
+          },
+          {
+            "collegename":"VIIT",
+            "branchname":["computer","civil","it","mech","chem","entc"],
+            "fullform":"Vishwakrama Institue of  technology"
+          },
+          {
+            "collegename":"MIT",
+            "branchname":["computer","civil","it","mech","chem","entc"],
+            "fullform":"MIT College Of Engineering Pune"
+          },
+          {
+            "collegename":"PVG",
+            "branchname":["computer","civil","it","mech","entc"],
+            "fullform":"Pune Vidyarthi Graha College Of Engineering"
+          },
+          {
+            "collegename":"AISSMS",
+            "branchname":["computer","it","entc","mech","civil"],
+            "fullform":"AISSMS College of Engineering"
+          },
+
+          
+        ]
+    
+        for(var i in colleges){
+    
+          
+          if(colleges[i].branchname.includes(value))
+          {
+
+
+    
+
+          var element= document.getElementById("maindiv")
+
+          element.innerHTML=element.innerHTML+`<div class="card">
+          <div class="card-body">
+            <h2 class="card-title">${colleges[i].collegename}</h2>
+            <p class="card-text">${colleges[i].fullform}</p><br>
+           
+          </div>
+          <div class="link">
+            <a href=${colleges[i].collegename}.html class="card-link">Learn More</a> 
+          </div>
+        </div>`
+          }
+    
+        }
+        
+      </script>
+</body>
+
+</html>
