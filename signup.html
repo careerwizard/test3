@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="signup.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+  <a href="home.html">
+    <button> <img src="https://i.ibb.co/HxTtrQ3/logo.png" class="hi">
+    </button> </a>
+    <form class="form" id="registrationForm">
+        <p class="title">Register </p>
+            <!-- <div class="flex">
+            <label>
+                <input required="" placeholder="" type="text" class="input">
+                <span>Firstname</span>
+            </label>
+    
+            <label>
+                <input required="" placeholder="" type="text" class="input">
+                <span>Lastname</span>
+            </label>
+        </div>   -->
+                
+        <label>
+            <input required="" placeholder="" type="email" class="input" name="email">
+            <span>Email</span>
+        </label> 
+            
+        <label>
+            <input required="" placeholder="" type="password" class="input" name="password">
+            <span>Password</span>
+        </label>
+        <label>
+            <input required="" placeholder="" type="password" class="input">
+            <span>Confirm password</span>
+        </label>
+        <button class="submit">Submit</button>
+        <p class="signin">Already have an acount ? <a href="login.html">Signin</a> </p>
+    </form>
+
+    <script>
+            
+        // Handle form submission
+        $('#registrationForm').submit(function(event) {
+          event.preventDefault(); // Prevent the form from submitting normally
+      
+          // Get form data
+          const formData = $(this).serialize();
+          console.log(formData)
+          // Make AJAX request to the registration API
+          $.ajax({
+            url: 'http://localhost:3000/register', // Replace with your API endpoint URL
+            type: 'POST',
+            data: formData,
+            success: function(response) {
+              // Registration successful, handle response
+              console.log(response);
+              alert('Registration successful');
+              // Add code here to redirect or show a success message to the user
+            },
+            error: function(error) {
+              // Registration failed, handle error
+              console.error(error);
+              alert('Registration failed');
+              // Add code here to show an error message to the user
+            }
+          });
+        });
+      </script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>College review</title>
+  <style>
+    #commentList {
+      list-style-type: none;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+      align-content: center;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    #commentForm {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #e90a0a;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    #commentList {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      background-color: white;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    span {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body onload="myFunction()">
+    
+  <h1>College review</h1>
+  
+  <form id="commentForm">
+    <label for="name">Name:</label>
+    <textarea id="name" required></textarea>
+    <!-- <input type="text" id="name" required> -->
+    <br>
+    <label for="comment">Comment:</label>
+    <textarea id="comment" required></textarea>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+  
+  <ul id="commentList"></ul>
+
+  <script>
+        const urlParams = new URLSearchParams(window.location.search);
+      const collegeName = urlParams.get('collegename');
+console.log(collegeName)
+    function myFunction(){
+       // localStorage.clear()
+
+
+    if(collegeName != null)
+    {
+        var comments = JSON.parse(localStorage.getItem(collegeName)) || [];
+    console.log(comments)
+        for(var i in comments){
+            var listItem = document.createElement('li');
+      var commentText = document.createElement('p');
+      commentText.textContent = comments[i].comment;
+      var commenter = document.createElement('span');
+      commenter.textContent = ' - ' + comments[i].name;
+    
+      listItem.appendChild(commentText);
+      listItem.appendChild(commenter);
+      commentList.appendChild(listItem);
+        }
+    
+        }
+    }
+    
+    
+    
+        document.getElementById('commentForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+    
+      var nameInput = document.getElementById('name');
+      var commentInput = document.getElementById('comment');
+      var commentList = document.getElementById('commentList');
+    
+      var name = nameInput.value;
+      var comment = commentInput.value;
+    
+      var listItem = document.createElement('li');
+      var commentText = document.createElement('p');
+      commentText.textContent = comment;
+      var commenter = document.createElement('span');
+      commenter.textContent = ' - ' + name;
+    
+      listItem.appendChild(commentText);
+      listItem.appendChild(commenter);
+      commentList.appendChild(listItem);
+    
+      nameInput.value = '';
+     commentInput.value = '';
+     console.log(localStorage)
+     var comments = JSON.parse(localStorage.getItem(collegeName)) || [];
+    
+     console.log(comments)
+      comments.push({ name: name, comment: comment });
+      localStorage.setItem(collegeName, JSON.stringify(comments));
+    
+    });
+    
+      </script>
+    </body>
+    </html>
+ <script>
+
+
+// function myFunction(){
+//     //localStorage.clear()
+
+//     var comments = JSON.parse(localStorage.getItem('comments')) || [];
+
+//     for(var i in comments){
+//         var listItem = document.createElement('li');
+//   var commentText = document.createElement('p');
+//   commentText.textContent = comments[i].comment;
+//   var commenter = document.createElement('span');
+//   commenter.textContent = ' - ' + comments[i].name;
+
+//   listItem.appendChild(commentText);
+//   listItem.appendChild(commenter);
+//   commentList.appendChild(listItem);
+
+//     }
+// }
+
+
+
+//     document.getElementById('commentForm').addEventListener('submit', function(e) {
+//   e.preventDefault();
+
+//   var nameInput = document.getElementById('name');
+//   var commentInput = document.getElementById('comment');
+//   var commentList = document.getElementById('commentList');
+
+//   var name = nameInput.value;
+//   var comment = commentInput.value;
+
+//   var listItem = document.createElement('li');
+//   var commentText = document.createElement('p');
+//   commentText.textContent = comment;
+//   var commenter = document.createElement('span');
+//   commenter.textContent = ' - ' + name;
+
+//   listItem.appendChild(commentText);
+//   listItem.appendChild(commenter);
+//   commentList.appendChild(listItem);
+
+//   nameInput.value = '';
+//  commentInput.value = '';
+//  console.log(localStorage)
+//  var comments = JSON.parse(localStorage.getItem('comments')) || [];
+
+//  console.log(comments)
+//   comments.push({ name: name, comment: comment });
+//   localStorage.setItem('comments', JSON.stringify(comments));
+
+// });
+
+//   </script>
+</body>
+</html>
+    

@@ -1,0 +1,62 @@
+.st 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+
+.p1 {
+    position: absolute;
+    width: 1388px;
+    height: 116px;
+
+    font-family:fantasy;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 44px;
+    text-align: center;
+
+    color: #000000;
+
+}
+
+.img1 {
+    position: absolute;
+    width: 650px;
+    height: 450px;
+    left: 799px;
+    top: 145px;
+    border-radius: 53px;
+}
+
+.img2 {
+    position: absolute;
+    width: 650px;
+    height: 500px;
+    left: 799px;
+    top: 640px;
+    border-radius: 66px;
+}
+
+.info3 {
+    position: absolute;
+    width: 600px;
+    height: 768px;
+    left: 74px;
+    top: 145px;
+
+    font-family: 'Passion One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
